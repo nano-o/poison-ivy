@@ -80,7 +80,7 @@ def query(Pk, conjectures, axioms):
                 f.write('#' + line + '\n')
     try:
         # return True # dry-run
-        cmd = ['ivy_check', 'assert={}:{}'.format(filename[:-4], Pk + 1) ,filename]
+        cmd = ['ivy_check', 'complete=fo', 'assert={}:{}'.format(filename[:-4], Pk + 1) ,filename]
         if N_MULTIPROCESSING <= 1:  # with N_MULTIPROCESSING > 1, outputs get mixed
             print ' '.join(cmd), '...',
             sys.stdout.flush()
